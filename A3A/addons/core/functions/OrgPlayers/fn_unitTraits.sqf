@@ -59,6 +59,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
     	case "I_G_Soldier_GL_F": {
             player setUnitTrait ["camouflageCoef",1.2];
             player setUnitTrait ["loadCoef",0.8];
+			player setUnitTrait ["explosiveSpecialist", true];
             _text = localize "STR_role_grenadier"
         };
     	case "I_G_Soldier_AR_F": {
@@ -70,6 +71,15 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 			player setUnitTrait ["UAVHacker",true]; 
 			player setUnitTrait ["explosiveSpecialist", true]; ///why not?
 			_text = localize "STR_role_engineer"
+		}; 
+		case "I_G_Soldier_unarmed_F":  {
+			player setUnitTrait ["camouflageCoef",0.8]; 
+			player setUnitTrait ["audibleCoef",0.8]; 
+			player setUnitTrait ["loadCoef",1.2]; 
+/*
+			_unit setVariable ["ace_medical_medicclass",2, true]; // set as doctor
+			_text = "Doctor";  // No ACE localization exists for this
+*/
 		}; 
     };
 };

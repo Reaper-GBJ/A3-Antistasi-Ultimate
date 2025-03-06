@@ -16,6 +16,6 @@ FIX_LINE_NUMBERS()
 params ["_target", "_side", "_maxSpend", "_availTypes"];
 
 if (_target isKindOf "Air") exitWith { 0 };     // UAV can kinda hit air, but lets not
-
-if (tierWar < 3) exitWith { 0 };
+// Changed from 3 to 6
+if (tierWar < 6) exitWith { 0 };
 1 - (tierWar - 5) / 10;       // 90% at tier 6 to 50% at tier 10
