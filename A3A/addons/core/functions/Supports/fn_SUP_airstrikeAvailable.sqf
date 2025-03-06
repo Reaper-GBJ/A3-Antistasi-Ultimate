@@ -18,6 +18,6 @@ params ["_target", "_side", "_maxSpend", "_availTypes"];
 if (_target isKindOf "Air") exitWith { 0 };     // airstrikes can't hit air
 
 // balance against carpetbombs from tier 6+
-if (tierWar < 3) exitWith { 0 };
+if (tierWar < 6) exitWith { 0 }; //Changed from 3 to 6
 if (tierWar < 6 or !("CARPETBOMBS" in _availTypes)) exitWith { 1 };
 1 - (tierWar - 5) / 10;       // 90% at tier 6 to 50% at tier 10

@@ -10,6 +10,34 @@ A3A_clientVersion = QUOTE(VERSION);
 Info_1("Client version: %1", QUOTE(VERSION_FULL));
 
 // *************************** Client pre-setup init *******************************
+private _whitelistedUIDs = [
+    "76561198012345678",  // Replace with actual Steam UIDs
+    "76561198123456789"
+];
+
+// Define the restricted roles by variable name or description
+private _restrictedRoles = [
+    "commanderX",  // Variable name of a specific role
+    "Default Commander"  // Description of a specific role
+];
+
+private _playerUID = getPlayerUID player;
+private _playerRoleName = vehicleVarName player;
+private _playerRoleDesc = roleDescription player;
+
+// Check if player's role matches the restricted ones
+if ((_playerRoleName in _restrictedRoles) || (_playerRoleDesc in _restrictedRoles)) then {
+    if !(_playerUID in _whitelistedUIDs) then {
+        hint "You are not whitelisted for this role!";
+        sleep 2;
+
+        // Send kick request to the server
+        if (!isServer) then {
+            kickPlayer = [owner player, "You are not whitelisted for this role."];
+            publicVariableServer "kickPlayer";
+        };
+    };
+};
 
 if (call A3A_fnc_modBlacklist) exitWith {};
 

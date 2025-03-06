@@ -27,3 +27,12 @@ class CfgNotifications
 class CfgDebriefing {
     #include "..\missionDescription\CfgDebriefingContents.hpp"
 };
+class CfgRoles {
+    class DefaultCommander {
+        displayName = "Default Commander";
+        allowedPlayers[] = {
+            "76561198080751056",  // Replace with your Steam UIDs
+            "1"
+        };
+    };
+};

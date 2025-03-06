@@ -264,7 +264,7 @@ class RscDisplayMain: RscStandardDisplay //main menu
 		class Logo: RscActivePicture
 		{
 			text = QPATHTOFOLDER(data\buttons\AULOGO_TEST.paa);
-			tooltip="Join the official Antistasi Ultimate Discord server!";
+			tooltip="Join the YLS Discord server!";
 			color[]={0.89999998,0.89999998,0.89999998,1};
 			colorActive[]={1,1,1,1};
 			shadow=0;
@@ -272,8 +272,8 @@ class RscDisplayMain: RscStandardDisplay //main menu
 			y="safezoneY + (2.75 - 0.25 * 	5) * 	(pixelH * pixelGrid * 2)";
 			w="2 * 	5 * 	(pixelW * pixelGrid * 2)";
 			h="0.5 * 	5 * 	(pixelH * pixelGrid * 2)";
-			url = "https://discord.gg/antistasiultimate";
-			onButtonClick="['https://discord.gg/antistasiultimate'] call bis_fnc_executeCode;";
+			url = "https://discord.ylsgaming.net";
+			onButtonClick="['https://discord.ylsgaming.net'] call bis_fnc_executeCode;";
 			onSetFocus="(_this select 0) ctrlsettextcolor [1,1,1,1];";
 			onKillFocus="(_this select 0) ctrlsettextcolor [0.9,0.9,0.9,1];";
 			onLoad="(_this select 0) ctrlshow !(395180 in getDLCs 1)";
@@ -316,7 +316,7 @@ class RscDisplayMain: RscStandardDisplay //main menu
 			onLoad = "(_this # 0) ctrlEnable true";
 			text = QPATHTOFOLDER(data\buttons\SteamB.paa); // Path to button image
 			tooltip = "Steam workshop Mod";
-			url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3020755032";
+			url = "https://steamcommunity.com/sharedfiles/filedetails/?id=3436481593";
 			onMouseEnter = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\SteamB_Hov.paa""";
 			onMouseExit = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\SteamB.paa""";
 			onMouseButtonUp = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\SteamB_Hov.paa""";
@@ -327,7 +327,7 @@ class RscDisplayMain: RscStandardDisplay //main menu
 			y = "safeZoneY + safeZoneH - 0.34";
 			text = QPATHTOFOLDER(data\buttons\GitB.paa); // Path to button image
 			tooltip="GitHub Page";
-			url = "https://github.com/SilenceIsFatto/A3-Antistasi-Ultimate";
+			url = "https://github.com/Reaper-GBJ/A3-Antistasi-Ultimate";
 			onMouseEnter = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\GitB_Hov.paa""";
 			onMouseExit = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\GitB.paa""";
 			onMouseButtonUp = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\GitB_Hov.paa""";
@@ -339,7 +339,7 @@ class RscDisplayMain: RscStandardDisplay //main menu
 			y = "safeZoneY + safeZoneH - 0.4";
 			text = QPATHTOFOLDER(data\buttons\ServerB.paa); // No text needed for an image button
 			tooltip="Connect to our community server!";
-			onMouseButtonClick = "connectToServer ['138.201.62.114', 2402, '1221']";
+			onMouseButtonClick = "connectToServer ['arma.ylsgaming.net', 20100, '1221']";
 			onMouseEnter = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\ServerB_Hov.paa""";
 			onMouseExit = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\ServerB.paa""";
 			onMouseButtonUp = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\ServerB_Hov.paa""";
@@ -361,8 +361,8 @@ class RscDisplayMain: RscStandardDisplay //main menu
         {
 			y = "safeZoneY + safeZoneH - 0.34";
 			text = QPATHTOFOLDER(data\buttons\WebsiteB.paa); // No text needed for an image button
-			tooltip="Official Website";
-			url = "https://antistasiultimate.com/Home/";
+			tooltip="YLS Community Website";
+			url = "https://ylsgaming.net/Home/";
 			onMouseEnter = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\WebsiteB_Hov.paa""";
 			onMouseExit = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\WebsiteB.paa""";
 			onMouseButtonUp = "(_this select 0) ctrlSetText ""\x\a3a\addons\main_menu\data\buttons\WebsiteB_Hov.paa""";
